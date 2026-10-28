@@ -3,13 +3,13 @@ using namespace std;
 class Student 
 {
 private:
-    int rollNO;
+    int rollno1;
     string name;
 public:
 //constructor 5
 Student(int r, string n) 
 {
-rollNO = r;
+rollno1 = r;
 name = n;
 cout << "student object created "<< endl;
  }
@@ -17,7 +17,7 @@ cout << "student object created "<< endl;
 // Member function
 void display() 
 {
-cout << "Roll Number: " << rollNO << endl;
+cout << "Roll Number: " << rollno1 << endl;
 cout << "Name: " << name << endl;
 }
 // Destructor
@@ -26,9 +26,15 @@ cout << "Name: " << name << endl;
 cout << "student object destroyed "<< endl;
 }
 };  
-int main() 
-{
-Student s1(101, "Arun");
+int main() {
+    int rollno;
+    string name;
+    cout << "Enter Roll Number: "<<endl;
+    cin >> rollno;
+    cout << "Enter Name: "<<endl;
+    cin >> name;
+    Student s1(rollno,name);
 s1.display();
+
 return 0;
 }
